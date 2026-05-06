@@ -17,6 +17,12 @@ sudo python3 tarayici.py komutu ile dosya çalıştırıldı ve aşağıdaki gö
 
 ![Modül 1 Nmap Tarama Sonucu](nmap_sonuc.png)
 
+4-) tarayici.py dosyasında M4 Aktif Cihaz Keşfi için pyhton kodları eklendi.
+sudo python3 tarayici.py komutu ile alıştırıldı ve aşağıdaki görüntü elde edildi.
+
+![Modül 4 AKtif Cihaz Keşfi Sonucu](aktif_cihaz.png)
+
+
 
 
 
