@@ -2,7 +2,7 @@
 
 1-) Github'da proje için repository oluşturuldu. İçerisine README.md, requirements.txt ve .gitignore dosyaları
 eklenip taslak oluşturuldu. .env dosyasıın içerisine api key koyuldu.
-Apia Key'in github'da görünmemesi için .gitignore içine .env yazıldı. 
+Api Key'in github'da görünmemesi için .gitignore içine .env yazıldı. 
 
 2-) Kali Linux ve Github, Linux da terminale yazdığımız şu adımlar ile
 birbirine bağlandı ve kali terminalinden commit-push edilmesi sağlandı:
@@ -18,9 +18,16 @@ sudo python3 tarayici.py komutu ile dosya çalıştırıldı ve aşağıdaki gö
 ![Modül 1 Nmap Tarama Sonucu](nmap_sonuc.png)
 
 4-) tarayici.py dosyasında M4 Aktif Cihaz Keşfi için pyhton kodları eklendi.
-sudo python3 tarayici.py komutu ile alıştırıldı ve aşağıdaki görüntü elde edildi.
+sudo python3 tarayici.py komutu ile Çalıştırıldı ve aşağıdaki görüntü elde edildi.
 
 ![Modül 4 AKtif Cihaz Keşfi Sonucu](aktif_cihaz.png)
+
+
+5-) tarayici.py dosyasında AI API ve gerekli kütüphaneler eklendi.
+sudo pyhton3 tarayici.py komutu ile çalıştırıldı ve aşağıdaki çıktı elde edildi.
+
+![AI API sonucu](api1.png)
+![AI API sonucu](api4.png)
 
 
 
