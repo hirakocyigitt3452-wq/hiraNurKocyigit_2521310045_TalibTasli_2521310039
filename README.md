@@ -7,6 +7,14 @@
  birbirine bağlandı ve kali terminalinden commit-push edilmesi sağlandı:
   git add. , git commit -m "ne yazmak istenirse ", git push
 
+3-) Proje klasörünün içerisine py uzantılı dosya oluşturuldu ve içine gerekli pyhton kodları yazıldı.
+sudo python3 tarayici.py komutu ile dosya çalıştırıldı ve aşağıdaki görüntü elde edildi.
+
+![Modül 1 Nmap Tarama Sonucu](nmap_sonuc.png)
+
+
+
+
 
 
  
