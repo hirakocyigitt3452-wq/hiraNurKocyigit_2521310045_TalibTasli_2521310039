@@ -6,4 +6,7 @@
 2-) Kali Linux ve Github, Linux da terminale yazdığımız şu adımlar ile
  birbirine bağlandı ve kali terminalinden commit-push edilmesi sağlandı:
   git add. , git commit -m "ne yazmak istenirse ", git push
+
+
+
  
