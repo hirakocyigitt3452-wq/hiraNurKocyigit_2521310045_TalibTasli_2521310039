@@ -18,7 +18,7 @@
     </head>
     <body>
         <h1>Ağ Güvenlik Tarama Raporu</h1>
-        <div class="zaman-etiketi">Oluşturulma Tarihi: 09-05-2026 13:14:44</div>
+        <div class="zaman-etiketi">Oluşturulma Tarihi: 09-05-2026 14:45:58</div>
 
         <h2>Modül 1: Açık Portlar ve Servisler</h2>
         <table>
@@ -70,89 +70,71 @@
             color: #333;
             max-width: 900px;
             margin: 20px auto;
+            background-color: #f9f9f9;
             padding: 20px;
-            background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         h1, h2, h3 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-top: 30px;
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-top: 25px;
         }
         h1 {
             text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            color: #2980b9;
+            color: #004085;
+            border-bottom: 3px solid #004085;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
         }
         h2 {
-            color: #34495e;
+            color: #0056b3;
+            border-bottom: 1px solid #0056b3;
         }
         h3 {
-            color: #2980b9;
-            border-bottom: 1px solid #ddd;
+            color: #0066cc;
+            font-size: 1.1em;
+            margin-top: 20px;
         }
         ul {
             list-style-type: disc;
             margin-left: 20px;
             padding-left: 0;
         }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding-left: 0;
+        }
         li {
             margin-bottom: 8px;
         }
-        strong {
-            color: #e74c3c; /* Kırmızı tonu */
-        }
-        .critical {
-            background-color: #fce7e7;
-            border-left: 5px solid #e74c3c;
-            padding: 10px 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .high {
-            background-color: #fff3e6;
-            border-left: 5px solid #ff9800;
-            padding: 10px 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .medium {
-            background-color: #e6f7ff;
-            border-left: 5px solid #2196f3;
-            padding: 10px 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .low {
-            background-color: #e6ffe6;
-            border-left: 5px solid #4caf50;
-            padding: 10px 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        p {
-            margin-bottom: 10px;
-        }
+        .risk-yuksek { color: #dc3545; font-weight: bold; }
+        .risk-orta { color: #ffc107; font-weight: bold; }
+        .risk-dusuk { color: #28a745; font-weight: bold; }
         .note {
-            font-style: italic;
-            color: #777;
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+            padding: 10px 15px;
             margin-top: 20px;
-            border-top: 1px dashed #ccc;
-            padding-top: 10px;
+            border-radius: 4px;
         }
-        .solution-list li {
-            font-size: 0.95em;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #888;
-            font-size: 0.8em;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        strong {
+            color: #004085;
         }
     </style>
 </head>
@@ -161,282 +143,254 @@
     <h1>Ağ Güvenliği Risk Analizi Raporu</h1>
     <h2>Nmap Tarama Sonuçları Değerlendirmesi</h2>
 
-    <p><strong>Hazırlayan:</strong> Kıdemli Siber Güvenlik Uzmanı</p>
-    <p><strong>Tarih:</strong> 25 Mayıs 2024</p>
+    <p>
+        <strong>Rapor Tarihi:</strong> 26 Mayıs 2024<br>
+        <strong>Hazırlayan:</strong> Kıdemli Siber Güvenlik Uzmanı
+    </p>
 
     <hr>
 
     <h2>1. Giriş</h2>
-    <p>Bu rapor, sağlanan Nmap ağ taraması sonuçlarına dayanarak bir ağdaki potansiyel güvenlik zafiyetlerini ve risklerini analiz etmek amacıyla hazırlanmıştır. Tarama sonuçları, ağda aktif olan servisleri, bunların versiyonlarını ve potansiyel güvenlik açıklarını ortaya koymaktadır. Bu raporun amacı, tespit edilen zafiyetleri açıklamak, risk seviyelerini belirlemek ve bu riskleri azaltmak için somut çözüm önerileri sunmaktır.</p>
+    <p>
+        Bu rapor, sağlanan Nmap ağ tarama sonuçlarına dayanarak hedef sistem(ler)in mevcut güvenlik duruşunu değerlendirmek amacıyla hazırlanmıştır. Bulgular, potansiyel güvenlik zafiyetleri ve açıklıklar açısından incelenmiş olup, belirlenen riskler ve bu riskleri azaltmaya yönelik öneriler sunulmuştur. Raporun amacı, müşterinin ağ güvenliği bilincini artırmak ve gerekli iyileştirmeleri yapmasına yardımcı olmaktır.
+    </p>
 
-    <h2>2. Bulgular</h2>
-    <p>Nmap taraması sonucunda tespit edilen açık portlar, servisler ve versiyon bilgileri incelenerek aşağıdaki kritik, yüksek ve orta riskli bulgular belirlenmiştir:</p>
+    <h2>2. Yönetici Özeti</h2>
+    <p>
+        Yapılan Nmap taraması sonucunda incelenen sistem üzerinde <strong>çok sayıda eski ve bilinen zafiyetlere sahip servis</strong> tespit edilmiştir. FTP, SSH, DNS, HTTP (Apache), MySQL, PostgreSQL gibi kritik servislerin ciddi derecede güncel olmayan versiyonlarının çalıştığı gözlemlenmiştir. Ayrıca, Telnet, VNC, X11 gibi güvenli olmayan protokollerin kullanımı ve NFS/SMB gibi dosya paylaşım servislerinin açık olması, <strong>yetkisiz erişim ve veri sızıntısı</strong> için yüksek risk taşımaktadır. Ağda tanımlanamayan bir cihazın bulunması envanter yönetimi eksikliğine işaret etmektedir. Genel olarak, tarama yapılan ortamın <strong>çok yüksek güvenlik riskine</strong> sahip olduğu ve acil önlemler alınması gerektiği sonucuna varılmıştır.
+    </p>
 
-    <h3>2.1. Kritik Zafiyetler</h3>
-    <p>Aşağıdaki bulgular, doğrudan sistem erişimine, veri sızıntısına veya ciddi hizmet kesintilerine yol açabilecek yüksek riskli güvenlik açıklarını temsil etmektedir. Acil müdahale gereklidir.</p>
+    <h2>3. Tarama Bilgileri</h2>
     <ul>
-        <li class="critical">
-            <strong>Port 21/tcp - FTP (vsftpd 2.3.4):</strong>
-            <p><strong>Zafiyet:</strong> Bu versiyon, özellikle bir arka kapı (backdoor) zafiyeti ile bilinen kritik bir güvenlik açığına sahiptir. Versiyon 2.3.4'te, kötü niyetli bir saldırgan, kullanıcı adı alanına ":)" karakterlerini ekleyerek bu arka kapıyı tetikleyebilir ve FTP oturumu üzerinden root yetkileriyle komut çalıştırma imkanı elde edebilir. Bu, sistem üzerinde tam kontrol sağlamalarına olanak tanır.</p>
-            <p><strong>Risk Seviyesi: KRİTİK.</strong> Bu zafiyetin istismarı çok kolaydır ve sistem üzerinde tam yetkili kontrol sağlar. Ağın ve sistemin bütünlüğünü, gizliliğini ve erişilebilirliğini doğrudan tehdit eder.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li><strong>ACİL DURUM:</strong> vsftpd servisini hemen kapatın veya <strong>kritik olarak bilinen 2.3.4 versiyonundan derhal güncelleyin</strong>. Mümkünse, FTP servisini yalnızca güvenli iç ağlardan erişilebilir hale getirin veya tamamen daha güvenli alternatifler (SFTP, FTPS) ile değiştirin.</li>
-                    <li>Sistemde potansiyel bir arka kapı bırakılmış olma ihtimaline karşı detaylı bir adli inceleme yapılmalıdır.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="critical">
-            <strong>Port 23/tcp - Telnet:</strong>
-            <p><strong>Zafiyet:</strong> Telnet, kimlik doğrulama bilgilerini (kullanıcı adları ve şifreler) ve tüm oturum trafiğini şifrelemeden, düz metin olarak ileten eski ve güvenli olmayan bir protokoldür. Bu, ağ trafiğini dinleyebilen (sniffing) bir saldırganın hassas bilgilere kolayca erişmesine olanak tanır.</p>
-            <p><strong>Risk Seviyesi: KRİTİK.</strong> Ağda dinleme yapabilen herhangi bir saldırganın kimlik bilgilerini ele geçirmesini ve sisteme yetkisiz erişim sağlamasını kolaylaştırır.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>Telnet servisini tamamen devre dışı bırakın.</li>
-                    <li>Uzak yönetim için şifreli ve güvenli bir alternatif olan <strong>SSH (Secure Shell)</strong> kullanın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="critical">
-            <strong>Port 5900/tcp - VNC (Versiyon Bulunamadı):</strong>
-            <p><strong>Zafiyet:</strong> VNC (Virtual Network Computing), şifreleme ve güçlü kimlik doğrulama mekanizmaları olmadan kullanıldığında önemli bir güvenlik riski oluşturur. Nmap versiyon bilgisi bulamasa da, açık olması potansiyel bir yetkisiz uzaktan erişim noktasıdır. Zayıf veya varsayılan şifreler brute-force saldırılarına açıktır.</p>
-            <p><strong>Risk Seviyesi: KRİTİK/YÜKSEK.</strong> Yetkisiz erişim, masaüstü paylaşımı ve kontrolü anlamına gelir.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>VNC servisi kullanılıyor ise, mutlaka güçlü şifreler ve SSH tünelleme gibi ek güvenlik katmanları ile korunmalıdır.</li>
-                    <li>Gereksizse VNC servisini tamamen devre dışı bırakın.</li>
-                    <li>VNC yerine daha modern ve güvenli uzaktan masaüstü çözümlerini değerlendirin.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="critical">
-            <strong>Port 6000/tcp - X11 (Versiyon Bulunamadı):</strong>
-            <p><strong>Zafiyet:</strong> X11, uzaktan erişim ve grafik arayüzleri için kullanılır. Yanlış yapılandırıldığında (özellikle kimlik doğrulama olmadan veya zayıf politikalarla), uzaktan kod yürütmeye, ekran görüntülemeye ve tuş vuruşlarını kaydetmeye (keylogging) olanak tanıyabilir. Nmap versiyon bulamamış olsa da, açık olması başlı başına bir risk göstergesidir.</p>
-            <p><strong>Risk Seviyesi: KRİTİK/YÜKSEK.</strong> Yetkisiz erişim, bilgi sızdırma ve uzaktan komut çalıştırma potansiyeli.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>X11 servisi gereksizse derhal devre dışı bırakın.</li>
-                    <li>Kullanımı zorunluysa, erişimi sıkı bir şekilde kısıtlayın (yalnızca belirli IP adreslerinden) ve SSH tünelleme gibi güvenli yöntemlerle erişimi sağlayın.</li>
-                </ul>
-            </p>
-        </li>
+        <li><strong>Tarama Yöntemi:</strong> Nmap Ağ Tarama Aracı</li>
+        <li><strong>Tarama Hedefi:</strong> Belirtilen IP aralığı ve cihazlar</li>
+        <li><strong>Tarama Amacı:</strong> Açık portların, çalışan servislerin ve versiyonların tespiti, ağdaki cihazların belirlenmesi.</li>
     </ul>
 
-    <h3>2.2. Yüksek Riskli Zafiyetler</h3>
-    <p>Bu bulgular, kritik olmasa da, istismar edilmeleri durumunda ciddi sonuçlar doğurabilecek önemli güvenlik zafiyetleridir. Orta vadede ele alınmaları önemlidir.</p>
-    <ul>
-        <li class="high">
-            <strong>Port 22/tcp - SSH (4.7p1 Debian 8ubuntu1):</strong>
-            <p><strong>Zafiyet:</strong> SSH versiyon 4.7p1 oldukça eskidir. Eski versiyonlar, çeşitli bilinen zafiyetler (örn. zayıf şifreleme algoritmaları, bilgi sızdırma açıkları) içerebilir ve modern güvenlik standartlarını karşılamayabilir. Brute-force saldırılarına karşı yetersiz koruma sunabilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Uzaktan yetkisiz erişim riski.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>SSH sunucusunu en güncel stabil versiyona yükseltin.</li>
-                    <li>Zayıf şifreleme algoritmalarını devre dışı bırakın ve yalnızca güçlü algoritmaları kullanın.</li>
-                    <li>Parola yerine anahtar tabanlı kimlik doğrulamayı zorunlu kılın ve root kullanıcısı ile doğrudan girişi devre dışı bırakın.</li>
-                    <li>Başarısız giriş denemelerini izleyin ve limitlendirin (fail2ban gibi araçlarla).</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 53/tcp - Domain (BIND 9.4.2):</strong>
-            <p><strong>Zafiyet:</strong> BIND 9.4.2 eski bir versiyondur ve DNS önbellek zehirlenmesi (cache poisoning), hizmet reddi (DoS) saldırıları ve diğer güvenlik açıkları ile bilinen zafiyetlere sahip olabilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> DNS hizmetinin kesintiye uğraması veya kötü niyetli alan adlarına yönlendirme riski.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>BIND sunucusunu en güncel stabil versiyona yükseltin.</li>
-                    <li>Gereksiz rekürsif sorguları kısıtlayın ve yalnızca yetkili istemcilere izin verin.</li>
-                    <li>DNSSEC gibi güvenlik uzantılarını etkinleştirin.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 80/tcp - HTTP (Apache 2.2.8):</strong>
-            <p><strong>Zafiyet:</strong> Apache HTTP Sunucusu 2.2.8 çok eski bir versiyondur. Bu versiyon, birçok bilinen zafiyet (örn. DoS, bilgi sızdırma, uzaktan kod yürütme) içermektedir ve güncel yamaları almamaktadır. Web sunucusu üzerinden istismar edilebilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Web sitesinin tahrif edilmesi, hizmet kesintisi veya arka uç sistemlere erişim riski.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>Apache HTTP Sunucusunu en güncel stabil versiyona (örn. Apache 2.4.x) yükseltin.</li>
-                    <li>Web uygulamalarını ve sunucu yapılandırmalarını güvenli hale getirin (mod_security, minimum yetki prensibi, gereksiz modüllerin devre dışı bırakılması).</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 139/tcp & 445/tcp - NetBIOS-SSN (SMB 3.X - 4.X):</strong>
-            <p><strong>Zafiyet:</strong> Nmap, versiyonu 3.X - 4.X olarak belirtse de, SMB (Server Message Block) protokolünün eski versiyonları (özellikle SMBv1) EternalBlue gibi bilinen kritik zafiyetlere (WannaCry, NotPetya saldırılarında kullanılan) sahiptir. Daha yeni versiyonlar bile yanlış yapılandırıldığında risk oluşturabilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Uzaktan kod yürütme, bilgi sızdırma, fidye yazılımı yayılımı.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>Gereksizse SMB servislerini devre dışı bırakın.</li>
-                    <li>SMBv1 desteğini devre dışı bırakın.</li>
-                    <li>Sistemin en güncel güvenlik yamalarına sahip olduğundan emin olun.</li>
-                    <li>Erişimi yalnızca güvenilir IP adresleriyle kısıtlayın ve güçlü kimlik doğrulama kullanın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 2049/tcp - NFS (Versiyon 2-4):</strong>
-            <p><strong>Zafiyet:</strong> NFS (Network File System) v2 ve v3 versiyonları, zayıf kimlik doğrulama mekanizmaları ve kolayca yanlış yapılandırılabilme eğilimleri nedeniyle güvenlik açıkları barındırır. Yetkisiz erişim ile dosya sistemine erişim sağlanabilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Hassas verilere yetkisiz erişim, dosya sisteminin tahrif edilmesi.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>NFS v4 veya daha yeni bir versiyona yükseltin (NFS v4, Kerberos gibi daha güçlü kimlik doğrulama seçenekleri sunar).</li>
-                    <li>Erişimi yalnızca belirli güvenilir istemci IP adresleriyle kısıtlayın.</li>
-                    <li>Dış ağdan NFS erişimine kesinlikle izin vermeyin.</li>
-                    <li>Paylaşılan dizinleri en düşük yetki prensibiyle yapılandırın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 2121/tcp - FTP (Versiyon 1.3.1):</strong>
-            <p><strong>Zafiyet:</strong> FTP versiyon 1.3.1 de eski bir versiyondur ve genellikle bilinen zafiyetler (örn. buffer overflow, format string bug'ları) içerir. Ayrıca, Telnet gibi, FTP de varsayılan olarak verileri şifrelemeden düz metin olarak iletir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Kimlik bilgisi sızıntısı, uzaktan kod yürütme.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>FTP servisini en güncel ve güvenli versiyona yükseltin veya SFTP/FTPS gibi şifreli alternatifler kullanın.</li>
-                    <li>Anonim erişimi devre dışı bırakın ve güçlü şifre politikaları uygulayın.</li>
-                    <li>Firewall kurallarıyla erişimi kısıtlayın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 3306/tcp - MySQL (5.0.51a-3ubuntu5):</strong>
-            <p><strong>Zafiyet:</strong> MySQL 5.0 oldukça eski bir versiyondur ve bilinen birçok güvenlik açığına sahiptir. Bu zafiyetler SQL enjeksiyonu, yetkisiz veri erişimi veya hizmet reddi saldırılarına yol açabilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Veritabanına yetkisiz erişim, veri sızıntısı veya veri bütünlüğünün bozulması.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>MySQL veritabanını en güncel stabil versiyona (örn. MySQL 8.x) yükseltin.</li>
-                    <li>Veritabanı erişimini yalnızca uygulama sunucularıyla sınırlandırın (firewall ile).</li>
-                    <li>Güçlü şifre politikaları uygulayın ve varsayılan kullanıcıları (örn. root) kaldırın veya güvenli hale getirin.</li>
-                    <li>Uygulama katmanında parametreli sorgular kullanarak SQL enjeksiyonu riskini azaltın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="high">
-            <strong>Port 5432/tcp - PostgreSQL (8.3.0 - 8.3.7):</strong>
-            <p><strong>Zafiyet:</strong> PostgreSQL 8.3.x versiyonları da oldukça eskidir ve bilinen birçok güvenlik açığına sahiptir. MySQL'e benzer şekilde, bu zafiyetler veri ihlallerine veya hizmet kesintilerine neden olabilir.</p>
-            <p><strong>Risk Seviyesi: YÜKSEK.</strong> Veritabanına yetkisiz erişim, veri sızıntısı veya veri bütünlüğünün bozulması.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>PostgreSQL veritabanını en güncel stabil versiyona (örn. PostgreSQL 16.x) yükseltin.</li>
-                    <li>Veritabanı erişimini yalnızca uygulama sunucularıyla sınırlandırın (firewall ile).</li>
-                    <li>Güçlü şifre politikaları uygulayın ve varsayılan kullanıcıları kaldırın veya güvenli hale getirin.</li>
-                    <li>Uygulama katmanında parametreli sorgular kullanarak SQL enjeksiyonu riskini azaltın.</li>
-                </ul>
-            </p>
-        </li>
-    </ul>
+    <hr>
 
-    <h3>2.3. Orta Riskli Bulgular</h3>
-    <p>Bu bulgular doğrudan bir zafiyet olmasa da, kötü niyetli kişiler tarafından istismar edilebilecek veya bilgi toplamak için kullanılabilecek potansiyel risk noktalarıdır. Takip ve iyileştirme gereklidir.</p>
-    <ul>
-        <li class="medium">
-            <strong>Port 25/tcp - SMTP (Versiyon Bulunamadı):</strong>
-            <p><strong>Zafiyet:</strong> Açık bir SMTP portu, özellikle bir e-posta sunucusu çalışıyorsa, spam gönderimi için açık bir aktarıcı (open relay) olarak istismar edilebilir. Versiyon bilgisi bulunamadığı için detaylı risk değerlendirmesi için ek inceleme gereklidir.</p>
-            <p><strong>Risk Seviyesi: ORTA.</strong> Spam saldırıları, itibar kaybı, potansiyel bilgi sızdırma.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>SMTP servisini yalnızca yetkili kullanıcılar veya sunucular için erişilebilir hale getirin.</li>
-                    <li>Open relay durumunu kontrol edin ve gerekli kısıtlamaları uygulayın.</li>
-                    <li>TLS/SSL ile e-posta iletişimini şifreleyin (SMTPS/Submission portları).</li>
-                </ul>
-            </p>
-        </li>
-        <li class="medium">
-            <strong>Port 111/tcp - RPCBind (Versiyon 2):</strong>
-            <p><strong>Zafiyet:</strong> RPCBind, diğer RPC servislerini (örn. NFS) keşfetmek için kullanılır. Açık RPCBind portu, ağdaki RPC servisleri hakkında bilgi sızdırmasına ve potansiyel olarak diğer zafiyetlerin (özellikle NFS ile ilişkili) istismar edilmesine zemin hazırlayabilir.</p>
-            <p><strong>Risk Seviyesi: ORTA.</strong> Bilgi sızdırma, diğer servisler için saldırı vektörü.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>RPCBind servisi gereksizse devre dışı bırakın.</li>
-                    <li>Kullanımı zorunluysa, erişimi sıkı bir şekilde kısıtlayın ve firewall kuralları uygulayın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="medium">
-            <strong>Port 513/tcp - Login (Versiyon Bulunamadı) & Port 514/tcp - tcpwrapped (Versiyon Bulunamadı):</strong>
-            <p><strong>Zafiyet:</strong> Bu portlar genellikle r-komutları (rlogin, rsh) ile ilişkilidir. Bu protokoller, zayıf kimlik doğrulama ve şifresiz iletişim nedeniyle son derece güvensizdir ve modern sistemlerde kullanılmamalıdır. 'tcpwrapped' ise bir servisin çalıştığını ancak Nmap'in versiyonunu belirleyemediğini veya bağlantıyı hemen kapattığını gösterir, bu da bir güvenlik duvarı veya erişim kısıtlaması olduğunu düşündürebilir ancak yine de bir servisin aktif olduğunu belirtir.</p>
-            <p><strong>Risk Seviyesi: ORTA/YÜKSEK.</strong> Kimlik bilgisi sızıntısı, yetkisiz komut çalıştırma.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>Bu servisleri tamamen devre dışı bırakın.</li>
-                    <li>Uzak yönetim için SSH gibi güvenli alternatifler kullanın.</li>
-                </ul>
-            </p>
-        </li>
-        <li class="medium">
-            <strong>Port 8009/tcp - AJP13 (Versiyon Bulunamadı):</strong>
-            <p><strong>Zafiyet:</strong> AJP13, genellikle Apache HTTPD ile Tomcat arasında iletişimi sağlamak için kullanılır. Bu portun doğrudan internete açık olması bir yanlış yapılandırma zafiyetidir. İç ağda olması gereken bir servisin dışarıya açılması, Tomcat üzerindeki potansiyel zafiyetlerin istismar edilme riskini artırır.</p>
-            <p><strong>Risk Seviyesi: ORTA.</strong> Tomcat zafiyetlerinin istismarı, iç ağa erişim.</p>
-            <p><strong>Çözüm Önerisi:</strong>
-                <ul class="solution-list">
-                    <li>Bu portu dışarıdan erişilemez hale getirmek için firewall kuralları uygulayın.</li>
-                    <li>Yalnızca Apache HTTPD sunucusunun IP adresinden erişilebilir olacak şekilde yapılandırın.</li>
-                </ul>
-            </p>
-        </li>
-    </ul>
+    <h2>4. Bulgular</h2>
 
-    <h3>2.4. Düşük Riskli Bulgular / Gözlemler</h3>
+    <h3>4.1. Açık Portlar ve Çalışan Servisler (M1)</h3>
+    <p>Aşağıda taranan sistemde tespit edilen açık portlar, ilgili servisler ve versiyon bilgileri listelenmiş olup, her bir bulgunun kısa bir ön değerlendirmesi yapılmıştır:</p>
     <ul>
-        <li class="low">
-            <strong>Ağdaki Cihazlar:</strong> Tespit edilen IP adreslerinin (192.168.17.1, 192.168.17.2, 192.168.17.129, 192.168.17.254) çoğunun VMware üreticisine ait MAC adreslerine sahip olması, ortamın sanallaştırılmış olduğunu göstermektedir. Bu başlı başına bir zafiyet olmamakla birlikte, sanallaştırma altyapısının (hypervisor) güvenliğinin kritik önem taşıdığını belirtir.</li>
-        <li class="low">
-            <strong>Bilinmeyen Cihaz (192.168.17.128):</strong> MAC adresi ve üretici bilgisi "Bilinmiyor" olarak listelenen bir cihaz bulunmaktadır. Bu durum, cihazın Nmap tarafından tam olarak tanımlanamadığı anlamına gelir. Ağda bulunan her cihazın envanteri ve amacı bilinmelidir.</li>
-            <p><strong>Çözüm Önerisi:</strong> Ağdaki 192.168.17.128 IP adresine sahip bilinmeyen cihazın fiziksel ve mantıksal olarak kimliği tespit edilmeli ve amacına uygun güvenlik politikaları uygulanmalıdır.</p>
-        </li>
-    </ul>
-
-    <h2>3. Genel Risk Değerlendirmesi</h2>
-    <p>Yapılan analizler sonucunda, incelenen sistemin <strong>Yüksek ve Kritik Risk Seviyesinde</strong> olduğu tespit edilmiştir. Özellikle <strong>vsftpd 2.3.4 arka kapı zafiyeti</strong> başta olmak üzere, birçok kritik ve yüksek riskli eski servis versiyonunun (SSH, BIND, Apache, SMB, NFS, MySQL, PostgreSQL, FTP) ve güvensiz protokollerin (Telnet, X11, VNC, r-komutları) açıkta bulunması, sistemin ciddi bir saldırı yüzeyine sahip olduğunu göstermektedir.</p>
-    <p>Bu durum, yetkisiz erişim, veri sızıntısı, hizmet kesintisi ve hatta tam sistem kontrolü gibi çok ciddi güvenlik ihlallerine davetiye çıkarmaktadır. Acil ve kapsamlı güvenlik önlemleri alınmadığı takdirde, sistemin siber saldırılara karşı savunmasız kalması kaçınılmazdır.</p>
-
-    <h2>4. Çözüm Önerileri</h2>
-    <p>Tespit edilen zafiyetlerin giderilmesi ve genel güvenlik duruşunun iyileştirilmesi için aşağıdaki önerilerin acilen hayata geçirilmesi gerekmektedir:</p>
-    <ul>
-        <li class="solution-list"><strong>Kritik Servislerin Acil Güncellenmesi/Kaldırılması:</strong>
+        <li><strong>Port 21/tcp - FTP (vsftpd 2.3.4):</strong>
             <ul>
-                <li><strong>vsftpd 2.3.4 (Port 21):</strong> Derhal kapatılmalı veya en güncel, güvenli versiyona yükseltilmeli. FTP yerine SFTP veya FTPS gibi güvenli alternatifler kullanılmalıdır.</li>
-                <li><strong>Telnet (Port 23):</strong> Tamamen devre dışı bırakılmalı, yerine SSH kullanılmalıdır.</li>
-                <li><strong>VNC (Port 5900) ve X11 (Port 6000):</strong> Gereksizse devre dışı bırakılmalı. Zorunlu ise, SSH tünelleme ile güvenli hale getirilmeli ve güçlü kimlik doğrulama kullanılmalıdır.</li>
-                <li><strong>r-komutları (Port 513, 514):</strong> Devre dışı bırakılmalıdır.</li>
+                <li><strong>Değerlendirme:</strong> vsftpd 2.3.4 versiyonu, 2011 yılında keşfedilmiş bir arka kapı (backdoor) zafiyetine (CVE-2011-4130) sahiptir. Bu zafiyet, kötü niyetli bir saldırganın hedef sistemde komut çalıştırmasına olanak tanır.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek / Kritik</span></li>
             </ul>
         </li>
-        <li class="solution-list"><strong>Eski Servislerin Güncellenmesi:</strong>
+        <li><strong>Port 22/tcp - SSH (OpenSSH 4.7p1 Debian 8ubuntu1):</strong>
             <ul>
-                <li><strong>SSH (4.7p1), BIND (9.4.2), Apache (2.2.8), MySQL (5.0.51a), PostgreSQL (8.3.x) ve FTP (1.3.1 - Port 2121):</strong> Tüm bu servisler en güncel ve desteklenen stabil versiyonlara yükseltilmelidir.</li>
-                <li><strong>SMB (Port 139, 445):</strong> SMBv1 desteği devre dışı bırakılmalı ve en güncel güvenlik yamaları uygulanmalıdır.</li>
-                <li><strong>NFS (Port 2049):</strong> NFSv4 veya daha yeni bir versiyona geçilmeli, erişim kısıtlamaları sıkılaştırılmalıdır.</li>
+                <li><strong>Değerlendirme:</strong> SSH servisi güvenli olmakla birlikte, kullanılan 4.7p1 versiyonu oldukça eskidir. Debian 8u1 ifadesi işletim sisteminin de eski olduğunu gösterir. Eski SSH versiyonları güncel şifreleme algoritmalarını desteklemeyebilir ve bilinen zafiyetlere karşı savunmasız olabilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-orta">Orta</span></li>
             </ul>
         </li>
-        <li class="solution-list"><strong>Minimum Yetki Prensibi:</strong> Her servis, uygulama ve kullanıcının yalnızca görevini yerine getirmesi için gerekli olan minimum ayrıcalıklara sahip olması sağlanmalıdır.</li>
-        <li class="solution-list"><strong>Güvenli Yapılandırma:</strong> Tüm servisler (SSH, veritabanları, web sunucusu vb.) için varsayılan ayarlar değiştirilmeli, güçlü şifreleme algoritmaları kullanılmalı ve gereksiz özellikler/modüller devre dışı bırakılmalıdır.</li>
-        <li class="solution-list"><strong>Ağ Segmentasyonu ve Güvenlik Duvarı Kuralları:</strong>
+        <li><strong>Port 23/tcp - Telnet (Versiyon Bulunamadı):</strong>
             <ul>
-                <li>İç ve dış ağ arasında sıkı güvenlik duvarı kuralları uygulanarak, sadece gerekli portların ve servislerin belirli IP adreslerinden erişimine izin verilmelidir.</li>
-                <li>AJP13 (Port 8009), RPCBind (Port 111) gibi iç servislere dışarıdan erişim kesinlikle engellenmelidir.</li>
-                <li>Ağ, farklı güvenlik seviyelerine sahip bölgelere (DMZ, iç ağ, veritabanı ağı) ayrılmalıdır.</li>
+                <li><strong>Değerlendirme:</strong> Telnet, kimlik bilgilerini ve tüm iletişimi şifresiz (açık metin olarak) ileten, güvenli olmayan bir protokoldür. Ağ dinleme (sniffing) saldırıları ile kolayca kullanıcı adı ve parolalar ele geçirilebilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
             </ul>
         </li>
-        <li class="solution-list"><strong>Kimlik Doğrulama ve Yetkilendirme:</strong>
+        <li><strong>Port 25/tcp - SMTP (Versiyon Bulunamadı):</strong>
             <ul>
-                <li>Tüm sistemlerde güçlü ve karmaşık parola politikaları zorunlu kılınmalı.</li>
-                <li>Mümkün olan her yerde iki faktörlü kimlik doğrulama (2FA) kullanılmalıdır.</li>
-                <li>Varsayılan kullanıcı adları ve şifreleri değiştirilmelidir.</li>
+                <li><strong>Değerlendirme:</strong> SMTP (e-posta gönderme) servisi. Versiyon bilgisi olmasa da, açık bir SMTP sunucusu yetkisiz e-posta gönderme (open relay) veya bilgi toplama (kullanıcı adları, e-posta adresleri) amaçlı kullanılabilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-orta">Orta</span></li>
             </ul>
         </li>
-        <li class="solution-list"><strong>Sürekli İzleme ve Loglama:</strong> Tüm kritik sistemlerde güvenlik logları etkinleştirilmeli, düzenli olarak incelenmeli ve anormallikler için izlenmelidir. Bir SIEM çözümü entegrasyonu değerlendirilmelidir.</li>
-        <li class="solution-list"><strong>Envanter Yönetimi:</strong> Ağdaki tüm cihazların (özellikle bilinmeyen 192.168.17.128) güncel ve doğru bir envanteri tutulmalı, her cihazın amacı ve güvenlik yapılandırması belgelenmelidir.</li>
-        <li class="solution-list"><strong>Sanallaştırma Platformu Güvenliği:</strong> Sanal ortamın güvenliği için VMware hypervisor ve yönetim arayüzlerinin güncel, yamalı ve güvenli yapılandırıldığından emin olunmalıdır.</li>
+        <li><strong>Port 53/tcp - DNS (BIND 9.4.2):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> BIND 9.4.2 versiyonu çok eski olup, DNS önbellek zehirlenmesi (cache poisoning), hizmet reddi (DoS) ve diğer uzaktan kod çalıştırma zafiyetleri gibi birçok bilinen güvenlik açığına sahiptir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 80/tcp - HTTP (Apache httpd 2.2.8):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Apache HTTP Server 2.2.8 versiyonu oldukça eskidir. Bu versiyon, çeşitli uzaktan kod çalıştırma, DoS ve bilgi sızdırma zafiyetleri dahil olmak üzere birçok bilinen güvenlik açığı içermektedir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 111/tcp - rpcbind (versiyon 2):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> RPC (Remote Procedure Call) servislerinin kayıt defteridir. Genellikle NFS ve diğer dağıtık servislerle birlikte kullanılır. rpcbind'in açık olması, NFS paylaşım bilgilerinin kolayca elde edilmesine olanak tanır ve potansiyel olarak DoS saldırılarına veya bilgi toplama saldırılarına yol açabilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-orta">Orta</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 139/tcp & 445/tcp - NetBIOS-SSN (Samba smbd 3.X - 4.X):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> SMB/CIFS (Windows Dosya Paylaşımı) protokolü. Samba 3.x ve 4.x serileri geniş bir yelpazeyi kapsasa da, bu eski versiyonlarda EternalBlue (WannaCry, NotPetya gibi zararlı yazılımların kullandığı) benzeri SMB zafiyetleri veya Samba'ya özgü uzaktan kod çalıştırma zafiyetleri bulunma ihtimali çok yüksektir. Yetkisiz dosya erişimi ve sistem kontrolü ele geçirme riski vardır.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek / Kritik</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 513/tcp - login (Versiyon Bulunamadı):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Unix tabanlı sistemlerde eski bir uzaktan giriş servisidir. Genellikle güvenli değildir ve Telnet gibi açık metin iletişim kullanabilir. Yetkisiz erişim riski taşır.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 514/tcp - tcpwrapped (Versiyon Bulunamadı):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Bu portta çalışan servis büyük olasılıkla tcpwrappers tarafından korunan bir servistir. Ancak "tcpwrapped" ifadesi, servisin tam olarak ne olduğunun tespit edilemediğini gösterir. Genellikle rsh, rlogin, syslog gibi eski servislerle ilişkilendirilir. Bilinmeyen bir servis potansiyel bir güvenlik açığıdır.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-orta">Orta</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 2049/tcp - NFS (versiyon 2-4):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Ağ Dosya Sistemi (NFS). Genellikle yanlış yapılandırıldığında (örneğin, kök dizin paylaşımı veya yetkisiz IP adreslerinden erişime izin verme) ciddi dosya sistemi erişim zafiyetlerine yol açar. rpcbind (111) ile birlikte ciddi risk oluşturur.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 2121/tcp - FTP (Pure-FTPd 1.3.1):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Standart dışı bir portta (2121) çalışan başka bir FTP servisi. Pure-FTPd 1.3.1 versiyonu da çok eski olup, bilinen birçok zafiyete sahiptir. Yetkisiz dosya erişimi veya kod çalıştırma riski taşır.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek / Kritik</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 3306/tcp - MySQL (versiyon 5.0.51a-3ubuntu5):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> MySQL 5.0.x versiyonu çok eskidir. SQL enjeksiyonu, kimlik doğrulama atlatma, ayrıcalık yükseltme ve diğer uzaktan kod çalıştırma zafiyetleri gibi birçok kritik güvenlik açığına sahiptir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek / Kritik</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 5432/tcp - PostgreSQL (versiyon 8.3.0 - 8.3.7):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> PostgreSQL 8.3.x versiyonu da MySQL gibi oldukça eskidir. Benzer şekilde, kimlik doğrulama atlatma, SQL enjeksiyonu ve uzaktan kod çalıştırma gibi birçok kritik güvenlik açığı içermektedir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek / Kritik</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 5900/tcp - VNC (Versiyon Bulunamadı):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> VNC (Virtual Network Computing) uzaktan masaüstü erişim protokolüdür. Genellikle zayıf kimlik doğrulama mekanizmaları (kaba kuvvet saldırılarına açık) ve şifresiz iletişim kullanması nedeniyle ciddi bir güvenlik riski taşır. Uzaktan sisteme tam kontrol sağlanabilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 6000/tcp - X11 (Versiyon Bulunamadı):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> X Pencere Sistemi. Genellikle kimlik doğrulaması zayıf veya hiç olmayan yapılandırmalarda, uzak bir saldırganın sistemin grafik oturumuna erişmesine veya tuş vuruşlarını dinlemesine olanak tanır.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-yuksek">Yüksek</span></li>
+            </ul>
+        </li>
+        <li><strong>Port 8009/tcp - ajp13 (Versiyon Bulunamadı):</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Apache JServ Protocol (AJP). Genellikle Apache HTTP sunucusu ile Tomcat gibi bir uygulama sunucusu arasında iletişim kurmak için kullanılır. Zayıf yapılandırılmış AJP konektörleri, sunucu tarafı istek sahtekarlığı (SSRF) veya hassas bilgilere erişim gibi zafiyetlere yol açabilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-orta">Orta</span></li>
+            </ul>
+        </li>
     </ul>
 
-    <h2>5. Sonuç</h2>
-    <p>Mevcut durumda, incelenen ağ ortamı yüksek düzeyde güvenlik riski taşımaktadır. Tespit edilen kritik ve yüksek riskli zafiyetlerin birçoğu kolayca istismar edilebilir niteliktedir. Bu zafiyetlerin derhal giderilmesi, sistemlerin güncellenmesi, gereksiz servislerin kapatılması ve ağ genelinde kapsamlı güvenlik önlemlerinin alınması elzemdir.</p>
-    <p>Bu rapor, ilk Nmap tarama bulgularına dayalı bir risk analizidir. Daha derinlemesine bir güvenlik değerlendirmesi (örneğin, manuel zafiyet testi, penetrasyon testi, yapılandırma denetimi) ile ek zafiyetlerin ortaya çıkarılması mümkündür. Önerilen çözümlerin uygulanması, sistemin genel güvenlik duruşunu önemli ölçüde güçlendirecektir.</p>
+    <h3>4.2. Ağdaki Cihazlar (M4)</h3>
+    <p>Ağda tespit edilen cihazlar ve üretici bilgileri aşağıdaki gibidir:</p>
+    <ul>
+        <li><strong>IP: 192.168.17.1, MAC: 00:50:56:C0:00:08, Üretici: VMware</strong></li>
+        <li><strong>IP: 192.168.17.2, MAC: 00:50:56:E5:76:67, Üretici: VMware</strong></li>
+        <li><strong>IP: 192.168.17.129, MAC: 00:0C:29:EF:DD:5C, Üretici: VMware</strong></li>
+        <li><strong>IP: 192.168.17.254, MAC: 00:50:56:F1:67:09, Üretici: VMware</strong></li>
+        <li><strong>IP: 192.168.17.128, MAC: Bilinmiyor, Üretici: Bilinmiyor Üretici</strong>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Ağdaki tüm cihazların VMware ortamında sanallaştırılmış makineler olması, genel güvenlik duruşunun sanallaştırma katmanına da bağlı olduğunu göstermektedir. Ancak <strong>192.168.17.128 IP adresindeki cihazın MAC adresi ve üreticisinin bilinmiyor olması</strong>, ağ envanterinde bir eksiklik veya kontrolsüz bir cihazın varlığına işaret etmektedir. Bu tür cihazlar, ağa yetkisiz erişim noktası veya içeriden bir tehdit unsuru olabilir.</li>
+                <li><strong>Risk Düzeyi:</strong> <span class="risk-orta">Orta</span></li>
+            </ul>
+        </li>
+    </ul>
 
-    <div class="footer">
-        <p class="note">Bu rapor, yalnızca sağlanan Nmap tarama verilerine dayanmaktadır ve bu verilerin kapsamıyla sınırlıdır. Tüm olası zafiyetleri içermeyebilir. Daha detaylı bir güvenlik analizi için ek testler ve değerlendirmeler önerilir.</p>
-        <p>&copy; 2024 Kıdemli Siber Güvenlik Uzmanı</p>
+    <hr>
+
+    <h2>5. Risk Analizi</h2>
+    <p>Bulgular ışığında, tespit edilen riskler önem derecelerine göre sınıflandırılmıştır:</p>
+
+    <h3>5.1. Yüksek Riskler</h3>
+    <ul>
+        <li><strong>Kritik Yazılım Zafiyetleri:</strong> vsftpd 2.3.4 (arka kapı), BIND 9.4.2, Apache 2.2.8, MySQL 5.0.x, PostgreSQL 8.3.x ve Pure-FTPd 1.3.1 gibi çok eski ve bilinen ciddi zafiyetlere sahip servislerin çalışması, uzaktan kod çalıştırma, kimlik doğrulama atlatma ve tam sistem kontrolü ele geçirme gibi saldırılara zemin hazırlamaktadır.</li>
+        <li><strong>Güvenli Olmayan Protokol Kullanımı:</strong> Telnet, VNC ve X11 gibi şifresiz iletişim kuran veya zayıf kimlik doğrulamasına sahip servislerin açık olması, hassas bilgilerin ele geçirilmesine ve yetkisiz uzak erişime olanak tanımaktadır.</li>
+        <li><strong>Yetkisiz Erişim ve Veri Sızıntısı Potansiyeli:</strong> NFS ve SMB (Samba) servislerinin açık ve büyük olasılıkla yanlış yapılandırılmış olması, ağdaki dosya sistemlerine yetkisiz erişim ve hassas veri sızıntısı riskini artırmaktadır. Samba'nın eski versiyonları EternalBlue benzeri kritik zafiyetlere açık olabilir.</li>
+        <li><strong>Sistem Açıklığı ve Bilgi Toplama:</strong> Tüm bu eski servisler, bir saldırganın sistem hakkında detaylı bilgi toplaması ve hedefe yönelik saldırılar geliştirmesi için geniş bir yüzey sunmaktadır.</li>
+    </ul>
+
+    <h3>5.2. Orta Riskler</h3>
+    <ul>
+        <li><strong>Genel Sistem Güncel Olmama Durumu:</strong> SSH 4.7p1 gibi nispeten daha az kritik olan ancak yine de eski versiyonlar, gelecekteki güvenlik açıkları için potansiyel oluşturur ve güncel güvenlik standartlarını karşılamaz.</li>
+        <li><strong>Bilinmeyen Cihaz Varolması:</strong> Ağda MAC adresi ve üreticisi bilinmeyen bir cihazın bulunması, ağ envanter yönetimi eksikliğine ve kontrolsüz bir erişim noktasına işaret eder. Bu cihaz, kötü amaçlı bir yazılıma sahip olabilir veya ağa yetkisiz giriş için kullanılabilir.</li>
+        <li><strong>SMTP ve AJP13 Servisleri:</strong> Versiyon bilgisi olmasa da, bu servislerin yanlış yapılandırılması durumunda bilgi toplama, hizmet reddi veya uygulama seviyesi zafiyetlere yol açabilir.</li>
+    </ul>
+
+    <h3>5.3. Düşük Riskler</h3>
+    <ul>
+        <li>Mevcut bulgular ışığında doğrudan düşük risk olarak değerlendirilebilecek belirgin bir durum bulunmamaktadır. Açık olan tüm portlar ve çalışan servisler, ya yüksek ya da orta düzeyde güvenlik riski taşımaktadır.</li>
+    </ul>
+
+    <hr>
+
+    <h2>6. Öneriler</h2>
+    <p>Tespit edilen riskleri azaltmak ve sistemin güvenlik duruşunu güçlendirmek için aşağıdaki acil ve uzun vadeli önlemlerin alınması şiddetle tavsiye edilir:</p>
+
+    <ol>
+        <li>
+            <strong>Acil Yama Yönetimi ve Güncelleme:</strong>
+            <ul>
+                <li>vsftpd, BIND, Apache, MySQL, PostgreSQL ve Pure-FTPd gibi kritik zafiyetlere sahip tüm servisler derhal en güncel ve desteklenen versiyonlara güncellenmelidir. Bu güncellemeler, bilinen güvenlik açıklarını kapatacaktır.</li>
+                <li>İşletim sistemi (Debian 8ubuntu1 gibi) de dahil olmak üzere tüm sistem bileşenleri düzenli olarak yamalanmalı ve güncel tutulmalıdır.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Güvenli Olmayan Servislerin Kapatılması/Değiştirilmesi:</strong>
+            <ul>
+                <li><strong>Telnet (Port 23), VNC (Port 5900) ve X11 (Port 6000)</strong> servisleri derhal kapatılmalı veya SSH (Port 22) gibi güvenli, şifreli alternatiflerle değiştirilmelidir. Uzaktan yönetim için SSH'nin yalnızca anahtar tabanlı kimlik doğrulama ile kullanılması önerilir.</li>
+                <li>Login (Port 513) gibi eski ve güvenli olmayan Unix servisleri tamamen kaldırılmalı veya erişimleri kısıtlanmalıdır.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Servislerin Güvenli Yapılandırılması:</strong>
+            <ul>
+                <li><strong>NFS (Port 2049) ve SMB (Port 139, 445):</strong> Bu dosya paylaşım servislerinin erişim izinleri ve yetkilendirmeleri sıkı bir şekilde gözden geçirilmelidir. Yalnızca belirli IP adreslerine ve kullanıcı hesaplarına erişim izni verilmeli, en az yetki prensibi uygulanmalıdır. Anonim erişim veya "root" yetkisi ile paylaşım kesinlikle engellenmelidir.</li>
+                <li><strong>SMTP (Port 25):</strong> Açık relay durumunda olup olmadığı kontrol edilmeli ve yetkisiz e-posta gönderimini engelleyecek şekilde yapılandırılmalıdır.</li>
+                <li><strong>AJP13 (Port 8009):</strong> Eğer Apache ve Tomcat kullanılıyorsa, AJP konektörü yalnızca yerel erişime izin verecek şekilde yapılandırılmalı ve internete doğrudan maruz bırakılmamalıdır.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Güçlü Kimlik Doğrulama ve Yetkilendirme Mekanizmaları:</strong>
+            <ul>
+                <li>Tüm servisler için karmaşık parolalar zorunlu kılınmalı ve mümkünse iki faktörlü kimlik doğrulama (2FA) uygulanmalıdır.</li>
+                <li>Varsayılan veya zayıf kullanıcı adları/parolalar değiştirilmeli.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Ağ Segmentasyonu ve Erişim Kontrolü:</strong>
+            <ul>
+                <li>Sistemler, ihtiyaçlarına göre farklı güvenlik bölgelerine (DMZ, iç ağ, yönetim ağı vb.) ayrılarak ağ segmentasyonu yapılmalıdır.</li>
+                <li>Ağ seviyesinde güvenlik duvarları (firewall) kullanılarak, yalnızca gerekli portlara ve IP adreslerine erişim izni verilmelidir (Least Privilege Prensibi).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Kapsamlı Envanter Yönetimi:</strong>
+            <ul>
+                <li>Ağdaki <strong>192.168.17.128</strong> IP adresli bilinmeyen cihazın kimliği derhal tespit edilmeli, amacı belirlenmeli ve güvenlik politikaları doğrultusunda yönetilmelidir. Tanımlanamayan cihazlar ağdan izole edilmelidir.</li>
+                <li>Tüm ağ cihazları ve sunucular için güncel bir envanter tutulmalı, hangi servisin hangi versiyonda çalıştığı düzenli olarak kaydedilmelidir.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Düzenli Güvenlik Taramaları ve Sızma Testleri:</strong>
+            <ul>
+                <li>Benzer Nmap taramaları ve daha derinlemesine zafiyet taramaları düzenli aralıklarla yapılmalı, tespit edilen yeni zafiyetler için proaktif önlemler alınmalıdır.</li>
+                <li>Belirli periyotlarla sızma testleri (penetration testing) yaptırılarak sistemin gerçek dünya saldırılarına karşı dayanıklılığı test edilmelidir.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Loglama ve İzleme:</strong>
+            <ul>
+                <li>Tüm kritik servislerin ve sistemlerin güvenlik logları etkinleştirilmeli, merkezi bir log yönetim sistemi (SIEM) ile toplanmalı ve düzenli olarak izlenerek anomaliler tespit edilmelidir.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>7. Sonuç</h2>
+    <p>
+        Yapılan Nmap tarama analizine göre, incelenen ağ ortamı <strong>çok sayıda eski yazılım versiyonu ve güvensiz protokol kullanımı</strong> nedeniyle ciddi güvenlik riskleri taşımaktadır. Tespit edilen zafiyetler, yetkisiz erişim, veri sızıntısı ve sistemin tamamen ele geçirilmesi gibi kritik sonuçlara yol açabilecek potansiyele sahiptir. Bu riskleri minimize etmek ve sistemin güvenliğini sağlamak için yukarıda belirtilen önerilerin <strong>ivedilikle ve titizlikle</strong> uygulanması gerekmektedir. Güvenlik, devamlılık arz eden bir süreç olduğundan, düzenli taramalar, güncellemeler ve güvenlik politikalarına uyum kritik öneme sahiptir.
+    </p>
+
+    <div class="note">
+        <strong>Yasal Uyarı:</strong> Bu rapor, sağlanan Nmap tarama sonuçlarına dayalı bir ön değerlendirme ve risk analizidir. Tam kapsamlı bir güvenlik değerlendirmesi için daha derinlemesine zafiyet taramaları, yapılandırma denetimleri ve sızma testleri yapılması önerilir. Bu raporda belirtilen önerilerin uygulanması, sistemlerin güvenlik duruşunu önemli ölçüde artıracaktır ancak mutlak güvenlik garanti etmez.
     </div>
 
 </body>

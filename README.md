@@ -30,12 +30,16 @@ sudo pyhton3 tarayici.py komutu ile çalıştırıldı ve aşağıdaki çıktı 
 ![AI API sonucu](api4,.png)
 
 6-) HTML Raporu Oluşturma
-Proje tamamlandığında tüm bulguları (Nmap sonuçları, Aktif Cihaz keşfi ve AI analizi) içeren düzenli bir HTML raporu otomatik olarak oluşturulur. Bu rapor "guvenlik_raporu.html" adıyla kaydedilir.
+Proje tamamlandığında tüm bulguları (Nmap sonuçları, Aktif Cihaz keşfi ve AI analizi) içeren düzenli bir HTML raporu otomatik olarak oluşturuldu. Bu rapor "guvenlik_raporu.html" adıyla kaydedildi.
 
 ![HTML Rapor Ekran Görüntüsü](html.png)
 
  
+7-) tarayici.py dosyasındaki kodlar,ayrı py dosyalarına aktarıldı.
 
+main.py: main.py: Programın ana giriş noktasıdır. Kullanıcıdan IP/Ağ bilgilerini alır, diğer modülleri sırasıyla çalıştırır ve sonuçları birleştirerek HTML raporu oluşturur.
+m1.py: Nmap ile hedef IP üzerinde SYN taraması yapar. 
+m4.py: yerel ağda (Subnet) ping taraması yaparak aktif cihazları, MAC adreslerini ve üretici bilgilerini listeler.
 
 
 
