@@ -1,1 +1,8 @@
 
+-- KULLANILAN KÜTÜPHANELER --
+subprocess
+xml.etree.ElementTree
+os
+datetime
+python-dotenv
+google-generativeai

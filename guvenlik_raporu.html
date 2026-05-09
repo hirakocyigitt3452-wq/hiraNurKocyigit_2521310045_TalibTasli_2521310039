@@ -1,0 +1,659 @@
+
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Siber Güvenlik Tarama Raporu</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f8f9fa; color: #212529; line-height: 1.6; }
+            h1 { color: #dc3545; text-align: center; border-bottom: 2px solid #dc3545; padding-bottom: 10px; }
+            h2 { color: #0d6efd; margin-top: 30px; }
+            .zaman-etiketi { text-align: center; font-weight: bold; color: #6c757d; margin-bottom: 30px; }
+            table { width: 100%; border-collapse: collapse; margin-bottom: 20px; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            th, td { border: 1px solid #dee2e6; padding: 12px; text-align: left; }
+            th { background-color: #343a40; color: white; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+            .ai-kutu { background-color: #e2e3e5; border-left: 6px solid #ffc107; padding: 20px; white-space: pre-wrap; font-family: monospace; font-size: 14px; overflow-x: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        </style>
+    </head>
+    <body>
+        <h1>Ağ Güvenlik Tarama Raporu</h1>
+        <div class="zaman-etiketi">Oluşturulma Tarihi: 09-05-2026 12:57:26</div>
+
+        <h2>Modül 1: Açık Portlar ve Servisler</h2>
+        <table>
+            <tr><th>Port / Protokol</th><th>Servis Adı</th><th>Versiyon Bilgisi</th></tr>
+    <tr><td>21/tcp</td><td>ftp</td><td>2.3.4</td></tr>
+<tr><td>22/tcp</td><td>ssh</td><td>4.7p1 Debian 8ubuntu1</td></tr>
+<tr><td>23/tcp</td><td>telnet</td><td>Bulunamadı</td></tr>
+<tr><td>25/tcp</td><td>smtp</td><td>Bulunamadı</td></tr>
+<tr><td>53/tcp</td><td>domain</td><td>9.4.2</td></tr>
+<tr><td>80/tcp</td><td>http</td><td>2.2.8</td></tr>
+<tr><td>111/tcp</td><td>rpcbind</td><td>2</td></tr>
+<tr><td>139/tcp</td><td>netbios-ssn</td><td>3.X - 4.X</td></tr>
+<tr><td>445/tcp</td><td>netbios-ssn</td><td>3.X - 4.X</td></tr>
+<tr><td>513/tcp</td><td>login</td><td>Bulunamadı</td></tr>
+<tr><td>514/tcp</td><td>tcpwrapped</td><td>Bulunamadı</td></tr>
+<tr><td>2049/tcp</td><td>nfs</td><td>2-4</td></tr>
+<tr><td>2121/tcp</td><td>ftp</td><td>1.3.1</td></tr>
+<tr><td>3306/tcp</td><td>mysql</td><td>5.0.51a-3ubuntu5</td></tr>
+<tr><td>5432/tcp</td><td>postgresql</td><td>8.3.0 - 8.3.7</td></tr>
+<tr><td>5900/tcp</td><td>vnc</td><td>Bulunamadı</td></tr>
+<tr><td>6000/tcp</td><td>X11</td><td>Bulunamadı</td></tr>
+<tr><td>8009/tcp</td><td>ajp13</td><td>Bulunamadı</td></tr>
+
+        </table>
+
+        <h2>Modül 2: Aktif Cihaz Keşfi</h2>
+        <table>
+            <tr><th>IP Adresi</th><th>MAC Adresi</th><th>Cihaz Üreticisi</th></tr>
+    <tr><td>192.168.18.0</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.1</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.2</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.3</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.4</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.5</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.6</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.7</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.8</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.9</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.10</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.11</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.12</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.13</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.14</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.15</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.16</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.17</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.18</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.19</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.20</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.21</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.22</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.23</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.24</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.25</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.26</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.27</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.28</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.29</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.30</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.31</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.32</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.33</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.34</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.35</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.36</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.37</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.38</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.39</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.40</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.41</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.42</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.43</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.44</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.45</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.46</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.47</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.48</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.49</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.50</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.51</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.52</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.53</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.54</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.55</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.56</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.57</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.58</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.59</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.60</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.61</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.62</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.63</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.64</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.65</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.66</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.67</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.68</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.69</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.70</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.71</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.72</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.73</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.74</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.75</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.76</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.77</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.78</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.79</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.80</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.81</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.82</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.83</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.84</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.85</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.86</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.87</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.88</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.89</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.90</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.91</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.92</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.93</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.94</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.95</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.96</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.97</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.98</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.99</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.100</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.101</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.102</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.103</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.104</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.105</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.106</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.107</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.108</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.109</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.110</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.111</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.112</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.113</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.114</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.115</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.116</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.117</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.118</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.119</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.120</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.121</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.122</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.123</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.124</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.125</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.126</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.127</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.128</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.129</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.130</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.131</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.132</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.133</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.134</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.135</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.136</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.137</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.138</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.139</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.140</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.141</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.142</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.143</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.144</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.145</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.146</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.147</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.148</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.149</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.150</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.151</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.152</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.153</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.154</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.155</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.156</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.157</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.158</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.159</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.160</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.161</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.162</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.163</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.164</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.165</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.166</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.167</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.168</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.169</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.170</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.171</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.172</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.173</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.174</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.175</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.176</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.177</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.178</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.179</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.180</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.181</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.182</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.183</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.184</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.185</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.186</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.187</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.188</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.189</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.190</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.191</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.192</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.193</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.194</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.195</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.196</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.197</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.198</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.199</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.200</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.201</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.202</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.203</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.204</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.205</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.206</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.207</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.208</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.209</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.210</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.211</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.212</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.213</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.214</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.215</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.216</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.217</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.218</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.219</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.220</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.221</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.222</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.223</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.224</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.225</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.226</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.227</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.228</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.229</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.230</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.231</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.232</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.233</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.234</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.235</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.236</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.237</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.238</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.239</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.240</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.241</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.242</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.243</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.244</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.245</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.246</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.247</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.248</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.249</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.250</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.251</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.252</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.253</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.254</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+<tr><td>192.168.18.255</td><td>Bilinmiyor</td><td>Bilinmiyor Üretici</td></tr>
+
+        </table>
+
+        <h2>Yapay Zeka Risk Analizi (Google Gemini)</h2>
+        <div class="ai-kutu">```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siber Güvenlik Risk Analizi Raporu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+            border-bottom: 3px solid #003366;
+        }
+        strong {
+            color: #d9534f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .critical {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .high {
+            color: #f0ad4e;
+            font-weight: bold;
+        }
+        .medium {
+            color: #5bc0de;
+        }
+        .low {
+            color: #5cb85c;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Siber Güvenlik Risk Analizi Raporu</h1>
+        <p><strong>Hazırlayan:</strong> Kıdemli Siber Güvenlik Uzmanı</p>
+        <p><strong>Tarih:</strong> 25 Temmuz 2024</p>
+        <hr>
+
+        <h2>1. Giriş</h2>
+        <p>Bu rapor, gerçekleştirilen Nmap ağ taraması sonuçlarına dayanarak, hedeflenen sistemde tespit edilen açık portlar, çalışan servisler ve versiyonları ile ilişkili potansiyel güvenlik risklerini analiz etmek amacıyla hazırlanmıştır. Tespit edilen bulgular, sistemin mevcut güvenlik duruşu hakkında önemli bilgiler sunmakta ve olası siber saldırılara karşı savunmasız noktaları ortaya koymaktadır.</p>
+        <p>Rapor, özellikle kritik zafiyet barındıran servisleri vurgulayarak, bu zafiyetlerin potansiyel etkilerini ve alınması gereken önlemleri detaylandırmaktadır.</p>
+
+        <h2>2. Genel Değerlendirme</h2>
+        <p>Yapılan tarama sonucunda, incelenen sistem üzerinde çok sayıda açık port ve bu portlarda çalışan servislerin eski versiyonları tespit edilmiştir. Bu durum, sistemin genel güvenlik seviyesinin düşük olduğunu ve bilinen birçok zafiyete açık olabileceğini göstermektedir. Özellikle, ciddi güvenlik açıkları barındırdığı bilinen <strong>vsftpd 2.3.4</strong> gibi servislerin varlığı, acil müdahale gerektiren kritik bir riski işaret etmektedir. Ayrıca, Telnet, eski SSH, BIND, Apache, MySQL ve PostgreSQL gibi yaygın kullanılan servislerin güncel olmayan versiyonlarının bulunması, sistemin genel olarak yama yönetiminin yetersiz olduğunu düşündürmektedir. Ağdaki cihazların detaylı bilgisine (MAC, üretici) ulaşılamaması, taramanın kapsamının genişletilmesi gerektiğini göstermektedir.</p>
+
+        <h2>3. Bulgular ve Risk Analizi</h2>
+
+        <h3>3.1. Açık Portlar ve Servisler</h3>
+        <p>Aşağıda, tarama sonucunda tespit edilen açık portlar ve ilgili servis/versiyon bilgileri yer almaktadır:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Port</th>
+                    <th>Protokol</th>
+                    <th>Servis</th>
+                    <th>Versiyon</th>
+                    <th>Risk Seviyesi</th>
+                    <th>Potansiyel Zafiyet / Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>21</td>
+                    <td>tcp</td>
+                    <td>ftp</td>
+                    <td>2.3.4</td>
+                    <td class="critical">KRİTİK</td>
+                    <td><strong>vsftpd 2.3.4 arka kapı zafiyeti (CVE-2011-2523). Acil müdahale gereklidir!</strong></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>tcp</td>
+                    <td>ssh</td>
+                    <td>4.7p1 Debian 8ubuntu1</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Eski Debian sürümü ve SSH versiyonu, bilinen zafiyetlere açık olabilir.</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>tcp</td>
+                    <td>telnet</td>
+                    <td>Bulunamadı</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Şifrelenmemiş iletişim, kimlik bilgisi hırsızlığı riski.</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>tcp</td>
+                    <td>smtp</td>
+                    <td>Bulunamadı</td>
+                    <td class="medium">ORTA</td>
+                    <td>Versiyon tespiti için ek araştırma gerekli, spam relay veya zafiyet riski.</td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>tcp</td>
+                    <td>domain</td>
+                    <td>9.4.2</td>
+                    <td class="critical">KRİTİK</td>
+                    <td>BIND'in çok eski bir sürümü, bilinen birçok kritik güvenlik açığı.</td>
+                </tr>
+                <tr>
+                    <td>80</td>
+                    <td>tcp</td>
+                    <td>http</td>
+                    <td>2.2.8</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Apache HTTP Server'ın desteklenmeyen eski bir sürümü, birçok CVE'ye karşı savunmasız.</td>
+                </tr>
+                <tr>
+                    <td>111</td>
+                    <td>tcp</td>
+                    <td>rpcbind</td>
+                    <td>2</td>
+                    <td class="medium">ORTA</td>
+                    <td>Diğer RPC servislerine (örn. NFS) yol açabilir, bilgi sızdırma riski.</td>
+                </tr>
+                <tr>
+                    <td>139</td>
+                    <td>tcp</td>
+                    <td>netbios-ssn</td>
+                    <td>3.X - 4.X</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Eski Samba/SMB versiyonları, EternalBlue (MS17-010) gibi zafiyetlere açık olabilir.</td>
+                </tr>
+                <tr>
+                    <td>445</td>
+                    <td>tcp</td>
+                    <td>netbios-ssn</td>
+                    <td>3.X - 4.X</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Eski Samba/SMB versiyonları, EternalBlue (MS17-010) gibi zafiyetlere açık olabilir.</td>
+                </tr>
+                <tr>
+                    <td>513</td>
+                    <td>tcp</td>
+                    <td>login</td>
+                    <td>Bulunamadı</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Güvenli olmayan 'r' servisleri, yetkisiz erişim riski.</td>
+                </tr>
+                <tr>
+                    <td>514</td>
+                    <td>tcp</td>
+                    <td>tcpwrapped</td>
+                    <td>Bulunamadı</td>
+                    <td class="medium">ORTA</td>
+                    <td>Servis tespiti için ek araştırma gerekli, potansiyel olarak güvenli olmayan servisler.</td>
+                </tr>
+                <tr>
+                    <td>2049</td>
+                    <td>tcp</td>
+                    <td>nfs</td>
+                    <td>2-4</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>NFS yapılandırma hataları ile yetkisiz dosya erişimi riski.</td>
+                </tr>
+                <tr>
+                    <td>2121</td>
+                    <td>tcp</td>
+                    <td>ftp</td>
+                    <td>1.3.1</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>FTP'nin eski bir sürümü, bilinen zafiyetler ve zayıf şifreleme.</td>
+                </tr>
+                <tr>
+                    <td>3306</td>
+                    <td>tcp</td>
+                    <td>mysql</td>
+                    <td>5.0.51a-3ubuntu5</td>
+                    <td class="critical">KRİTİK</td>
+                    <td>MySQL 5.0 çok eski ve desteklenmeyen bir versiyon, ciddi zafiyetler barındırır.</td>
+                </tr>
+                <tr>
+                    <td>5432</td>
+                    <td>tcp</td>
+                    <td>postgresql</td>
+                    <td>8.3.0 - 8.3.7</td>
+                    <td class="critical">KRİTİK</td>
+                    <td>PostgreSQL 8.3 çok eski ve desteklenmeyen bir versiyon, ciddi zafiyetler barındırır.</td>
+                </tr>
+                <tr>
+                    <td>5900</td>
+                    <td>tcp</td>
+                    <td>vnc</td>
+                    <td>Bulunamadı</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Zayıf parola veya şifreleme ile uzaktan kontrol riski.</td>
+                </tr>
+                <tr>
+                    <td>6000</td>
+                    <td>tcp</td>
+                    <td>X11</td>
+                    <td>Bulunamadı</td>
+                    <td class="high">YÜKSEK</td>
+                    <td>Yanlış yapılandırıldığında uzaktan kod yürütme, tuş kaydedici riski.</td>
+                </tr>
+                <tr>
+                    <td>8009</td>
+                    <td>tcp</td>
+                    <td>ajp13</td>
+                    <td>Bulunamadı</td>
+                    <td class="medium">ORTA</td>
+                    <td>Tomcat AJP connector, "Ghostcat" (CVE-2020-1938) gibi zafiyetlere açık olabilir.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3.2. Kritik ve Yüksek Riskli Bulgulara Detaylı Bakış</h3>
+        <ul>
+            <li><strong>Port 21 - FTP (vsftpd 2.3.4): KRİTİK RİSK!</strong>
+                <p>Bu versiyon (vsftpd 2.3.4), bilinen bir arka kapı (backdoor) zafiyetine (CVE-2011-2523) sahiptir. Bu zafiyet, saldırganların sisteme uzaktan root yetkileriyle erişim sağlamasına olanak tanır. Bu, sistemin tamamen ele geçirilmesine yol açabilecek en kritik zafiyetlerden biridir.</p>
+            </li>
+            <li><strong>Port 23 - Telnet: YÜKSEK RİSK!</strong>
+                <p>Telnet, iletişim trafiğini şifrelemeden gönderir. Bu, kullanıcı adları, parolalar ve diğer hassas verilerin ağ üzerinden dinlenerek (sniffing) ele geçirilmesine olanak tanır. Kullanımdan kaldırılmalı veya sadece güvenli, izole edilmiş ağlarda kullanılmalıdır.</p>
+            </li>
+            <li><strong>Port 53 - DNS (BIND 9.4.2): KRİTİK RİSK!</strong>
+                <p>BIND 9.4.2 oldukça eski bir versiyondur ve yıllardır bilinen birçok güvenlik açığına sahiptir. Bu zafiyetler, DNS önbellek zehirlenmesi, DoS saldırıları veya uzaktan kod yürütme gibi ciddi saldırılara yol açabilir.</p>
+            </li>
+            <li><strong>Port 80 - HTTP (Apache 2.2.8): YÜKSEK RİSK!</strong>
+                <p>Apache HTTP Server 2.2.8, uzun süredir desteklenmeyen (EOL) bir versiyondur ve bilinen çok sayıda güvenlik açığına sahiptir. Bu zafiyetler, bilgi sızdırma, DoS saldırıları, hatta uzaktan kod yürütmeye yol açabilir.</p>
+            </li>
+            <li><strong>Port 139 & 445 - NetBIOS/SMB (Samba 3.X - 4.X): YÜKSEK RİSK!</strong>
+                <p>Samba'nın bu eski versiyonları, özellikle WannaCry ve EternalBlue gibi fidye yazılımları tarafından kullanılan MS17-010 zafiyeti gibi bilinen çok sayıda zafiyete sahip olabilir. Yetkisiz dosya erişimi, uzaktan kod yürütme ve ağda yayılma riski taşır.</p>
+            </li>
+            <li><strong>Port 513 (login) ve 514 (tcpwrapped): YÜKSEK RİSK!</strong>
+                <p>Unix tabanlı sistemlerdeki bu eski 'r' servisleri (rlogin, rsh) genellikle zayıf kimlik doğrulama mekanizmalarına sahiptir ve güvenli olmayan "güven" ilişkilerine dayanır. Saldırganlar bu servisleri yetkisiz erişim için kötüye kullanabilir.</p>
+            </li>
+            <li><strong>Port 2049 - NFS (Sürüm 2-4): YÜKSEK RİSK!</strong>
+                <p>NFS servisinin yanlış yapılandırılması, hassas dosya sistemlerine yetkisiz erişime veya yazma izni verilmesine neden olabilir. Bu, veri sızıntısı veya sistem bütünlüğünün bozulması riskini taşır.</p>
+            </li>
+            <li><strong>Port 3306 - MySQL (5.0.51a-3ubuntu5): KRİTİK RİSK!</strong>
+                <p>MySQL 5.0, çok uzun zaman önce destek dışı kalmış bir versiyondur. Bu versiyonda birçok ayrıcalık yükseltme, SQL enjeksiyonu ve veri sızıntısı zafiyeti bulunmaktadır. Veritabanının ele geçirilmesi durumunda tüm verilerin tehlikeye girmesi söz konusudur.</p>
+            </li>
+            <li><strong>Port 5432 - PostgreSQL (8.3.0 - 8.3.7): KRİTİK RİSK!</strong>
+                <p>PostgreSQL 8.3 de oldukça eski bir versiyondur ve desteklenmemektedir. Tıpkı MySQL gibi, bu versiyon da bilinen birçok güvenlik açığına sahiptir ve hassas verilerin sızdırılmasına veya sistemin ele geçirilmesine yol açabilir.</p>
+            </li>
+            <li><strong>Port 5900 - VNC: YÜKSEK RİSK!</strong>
+                <p>VNC servisi genellikle zayıf şifreleme veya hiç şifreleme kullanmaz. Parola koruması yetersiz ise veya zayıf parola kullanılırsa, saldırganlar uzaktan sisteme erişebilir ve kontrolünü ele geçirebilir.</p>
+            </li>
+            <li><strong>Port 6000 - X11: YÜKSEK RİSK!</strong>
+                <p>X11, eğer doğru yapılandırılmazsa uzaktan bağlantılara izin verebilir. Bu, saldırganların ekrandaki tuş vuruşlarını kaydetmesine, ekran görüntüleri almasına veya sisteme komut göndermesine olanak tanıyabilir.</p>
+            </li>
+            <li><strong>Port 22 - SSH (4.7p1 Debian 8ubuntu1): YÜKSEK RİSK!</strong>
+                <p>Debian 8 (Jessie), destek ömrü sona ermiş bir işletim sistemidir. SSH'nin bu versiyonu da güncel olmayan zafiyetlere sahip olabilir veya zayıf kriptografik algoritmalar kullanıyor olabilir. Bu, brute-force saldırılarına veya protokol zafiyetlerine karşı savunmasızlık yaratır.</p>
+            </li>
+        </ul>
+
+        <h3>3.3. Ağdaki Cihazlar ve Bilgi Eksikliği</h3>
+        <p>Ağ taramasında 192.168.18.0/24 subnetinde çok sayıda IP adresinin aktif olduğu tespit edilmiştir. Ancak tüm cihazlar için MAC adresleri ve üretici bilgileri "Bilinmiyor" olarak raporlanmıştır. Bu durum, taramanın yapıldığı ortamda ARP çözümlemesinin yapılamadığını veya taramanın farklı bir ağ segmentinden gerçekleştirildiğini göstermektedir.</p>
+        <p>Bu bilgi eksikliği, ağdaki cihazların envanterini çıkarmayı ve olası güvenlik açıklarını cihaz bazında ilişkilendirmeyi zorlaştırmaktadır. Tam bir güvenlik değerlendirmesi için MAC adresleri ve üretici bilgileri gibi donanımsal detayların da elde edilmesi faydalı olacaktır.</p>
+
+        <h2>4. Çözüm Önerileri</h2>
+        <p>Tespit edilen zafiyetlerin ciddiyeti göz önüne alındığında, aşağıdaki önlemlerin acilen alınması gerekmektedir:</p>
+
+        <h3>4.1. Acil Eylem Planı (Kritik Risklerin Giderilmesi)</h3>
+        <ul>
+            <li><strong>vsftpd 2.3.4 (Port 21):</strong> Bu servisi derhal kapatın veya en güncel, güvenli bir FTP sunucusuna (örn. Pure-FTPd, ProFTPD'nin güncel versiyonları) yükseltin. Mümkünse, FTP yerine SFTP veya FTPS gibi şifreli alternatifleri kullanın. Bu zafiyet, root erişimine yol açtığı için <strong>mutlaka ilk ele alınması gereken konudur.</strong></li>
+            <li><strong>Telnet (Port 23):</strong> Telnet servisini tamamen devre dışı bırakın. Uzaktan erişim için SSH gibi şifreli ve güvenli alternatifleri kullanın.</li>
+            <li><strong>BIND 9.4.2 (Port 53):</strong> BIND servisini en güncel ve desteklenen bir versiyona yükseltin (örn. BIND 9.16.x veya 9.18.x). Gerekli olmayan durumlarda dışarıya kapalı tutun.</li>
+            <li><strong>MySQL 5.0 ve PostgreSQL 8.3 (Port 3306, 5432):</strong> Bu veritabanı sunucularını acilen desteklenen ve güncel bir versiyona yükseltin (örn. MySQL 8.x, PostgreSQL 14.x/15.x). Yükseltme mümkün değilse, veritabanı erişimini kısıtlayıcı güvenlik duvarı kuralları uygulayın ve hassas verileri bu sunuculardan taşıyın.</li>
+        </ul>
+
+        <h3>4.2. Kısa Vadeli Eylemler (Yüksek Risklerin Giderilmesi)</h3>
+        <ul>
+            <li><strong>Tüm Eski Servis Versiyonları:</strong> Apache 2.2.8, SSH 4.7p1, Samba 3.X-4.X, NFS 2-4, FTP 1.3.1 gibi tespit edilen tüm eski servis versiyonlarını en güncel ve desteklenen sürümlerine yükseltin. Bu, bilinen güvenlik açıklarının kapatılması için hayati öneme sahiptir.</li>
+            <li><strong>Kullanılmayan Servislerin Kapatılması:</strong> Gereksinim duyulmayan tüm açık portları ve servisleri (örn. login, rsh, X11, ajp13 eğer kullanılmıyorsa) güvenlik duvarı üzerinden kapatın veya tamamen devre dışı bırakın. "Least Privilege" (en az ayrıcalık) prensibini uygulayın.</li>
+            <li><strong>VNC (Port 5900):</strong> VNC erişimi için güçlü parolalar kullanın ve mümkünse SSH tünelleme gibi ek güvenlik katmanları ekleyin. Eğer zorunlu değilse, VNC'yi sadece dahili ağdan erişime açık tutun.</li>
+            <li><strong>Ağ Paylaşım Servisleri (SMB/NFS):</strong> SMB ve NFS paylaşımlarının erişim haklarını en az ayrıcalık ilkesine göre sıkılaştırın. Anonim erişimi tamamen engelleyin ve yalnızca yetkili kullanıcıların belirli kaynaklara erişebilmesini sağlayın. Özellikle NFS servislerinin `root_squash` ve `no_subtree_check` gibi seçenekleri doğru yapılandırıldığından emin olun.</li>
+            <li><strong>SSH Güçlendirme:</strong> SSH servisi için zayıf parolaları yasaklayın, parola yerine anahtar tabanlı kimlik doğrulamayı tercih edin, root ile doğrudan girişi kapatın ve varsayılan portu değiştirerek brute-force saldırılarına karşı direnci artırın. Güncel şifreleme algoritmaları kullanıldığından emin olun.</li>
+        </ul>
+
+        <h3>4.3. Uzun Vadeli Stratejiler</h3>
+        <ul>
+            <li><strong>Varlık Yönetimi ve Güncelleme Politikası:</strong> Ağdaki tüm sistem ve yazılımların güncel envanterini tutun. Düzenli yama ve güncelleme politikaları oluşturun ve uygulayın. Destek ömrü dolmuş (EOL) sistem ve yazılımların en kısa sürede güncel alternatiflerle değiştirilmesini sağlayın.</li>
+            <li><strong>Ağ Segmentasyonu:</strong> Kritik sunucuları ve hizmetleri, diğer ağ bileşenlerinden ayrı tutan VLAN'lar veya güvenlik bölgeleri (DMZ) oluşturarak ağ segmentasyonunu uygulayın. Bu, bir zafiyetin tüm ağa yayılmasını engeller.</li>
+            <li><strong>Güvenlik Duvarı Kuralları:</strong> Tüm sunucular ve ağ cihazları üzerinde "en az ayrıcalık" prensibine dayalı sıkı güvenlik duvarı kuralları uygulayın. Yalnızca gerekli portların ve protokellerin belirli kaynaklardan erişimine izin verin.</li>
+            <li><strong>Sızma Testleri ve Zafiyet Tarama Programları:</strong> Periyodik olarak sızma testleri ve derinlemesine zafiyet taramaları gerçekleştirerek, yeni ortaya çıkan veya gözden kaçan güvenlik açıklarını tespit edin.</li>
+            <li><strong>İzleme ve Loglama:</strong> Tüm kritik sistemlerde güvenlik olaylarını izlemek için merkezi log yönetimi ve SIEM (Security Information and Event Management) çözümleri kullanın. Anormal aktiviteleri ve saldırı girişimlerini tespit etmek için alarmlar kurun.</li>
+            <li><strong>Güvenlik Bilinci Eğitimi:</strong> Tüm çalışanlara düzenli siber güvenlik bilinci eğitimleri vererek, insan faktöründen kaynaklanabilecek riskleri minimize edin.</li>
+        </ul>
+
+        <h2>5. Sonuç</h2>
+        <p>Bu Nmap taraması sonuçları, hedeflenen sistemin mevcut güvenlik duruşunda ciddi zafiyetler barındırdığını açıkça göstermektedir. Özellikle <strong>vsftpd 2.3.4, eski BIND, MySQL ve PostgreSQL versiyonları</strong> gibi kritik bulgular, sistemin bir saldırgan tarafından tamamen ele geçirilme riskinin çok yüksek olduğunu ortaya koymaktadır. Bu durum, veri kaybı, hizmet kesintisi, itibar kaybı ve yasal yaptırımlar gibi ciddi sonuçlara yol açabilir.</p>
+        <p>Önerilen çözüm eylemlerinin, özellikle acil eylem planında belirtilenlerin, gecikmeksizin uygulanması, sistemin güvenlik seviyesini önemli ölçüde artıracak ve olası siber saldırılara karşı direncini güçlendirecektir. Sürekli bir güvenlik izleme ve iyileştirme döngüsü, uzun vadede sürdürülebilir bir güvenlik duruşu için elzemdir.</p>
+
+        <hr>
+        <h3>Yasal Feragatname:</h3>
+        <p>Bu rapor, belirtilen Nmap tarama sonuçlarına dayanmaktadır ve yalnızca belirli bir anlık durumu yansıtmaktadır. Siber güvenlik tehditleri sürekli geliştiğinden, sistemin gelecekteki güvenlik durumunu garanti etmez. Kapsamlı bir güvenlik duruşu için sürekli izleme, güncellemeler ve ek güvenlik testleri gereklidir. Sağlanan bilgiler "olduğu gibi" sunulmuş olup, herhangi bir garanti teşkil etmez.</p>
+    </div>
+</body>
+</html>
+```</div>
+
+    </body>
+    </html>
+    
